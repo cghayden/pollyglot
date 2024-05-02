@@ -50,7 +50,7 @@ form.addEventListener('submit', async (e) => {
       model: 'gpt-4-turbo',
       messages,
       temperature: 1,
-      max_tokens: 100,
+      max_tokens: 150,
     })
 
     renderTranslation(response.choices[0].message.content, text)
