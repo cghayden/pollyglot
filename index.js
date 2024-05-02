@@ -5,13 +5,15 @@ const originalTextElement = document.getElementById('originalText')
 const resultsDiv = document.getElementById('results')
 const translationTextElement = document.getElementById('translation')
 const startOverButton = document.getElementById('startOver')
-
+const translateButton = document.getElementById('submit')
 startOverButton.addEventListener('click', () => {
   form.style.display = 'block'
   resultsDiv.style.display = 'none'
   form.reset()
   originalTextElement.value = ''
   translationTextElement.value = ''
+  translateButton.disabled = false
+  translateButton.innerHTML = 'Translate'
 })
 
 const craftMessage = (text, selectedLanguage) => {
@@ -32,6 +34,8 @@ const craftMessage = (text, selectedLanguage) => {
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault()
+  translateButton.disabled = true
+  translateButton.innerHTML = 'Translating...'
   const text = document.getElementById('text').value
   const selectedLanguage = document.querySelector(
     'input[name="language"]:checked'
