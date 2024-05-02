@@ -161,11 +161,16 @@ button:disabled {
   padding: 0;
 }
 
+#originalText,
+#translation {
+  color: black;
+}
+
 @media (max-width: 667px) {
   .hideOnMobile {
     display: none;
   }
-  #main {
+  /* #main {
     height: 73%;
     padding: 0.5rem 0.75rem;
     font-size: 16px;
@@ -180,5 +185,5 @@ button:disabled {
   .my1p5 {
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
-  }
+  } */
 }
