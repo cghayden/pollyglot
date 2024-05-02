@@ -1,11 +1,30 @@
 import OpenAI from 'openai'
 
 const form = document.getElementById('form')
+const textArea = document.getElementById('textArea')
 const originalTextElement = document.getElementById('originalText')
 const resultsDiv = document.getElementById('results')
 const translationTextElement = document.getElementById('translation')
 const startOverButton = document.getElementById('startOver')
 const translateButton = document.getElementById('submit')
+const remainingCharsText = document.getElementById('remainingChars')
+const maxLength = textArea.getAttribute('maxlength')
+
+function updateRemainingChars() {
+  const currentLength = textArea.value.length
+  const remainingChars = maxLength - currentLength
+  remainingCharsText.textContent = `${remainingChars} characters remaining`
+}
+
+textArea.addEventListener('input', function () {
+  updateRemainingChars()
+})
+
+form.addEventListener('reset', function () {
+  // Use setTimeout to defer the update until after the form has reset
+  setTimeout(updateRemainingChars, 0)
+})
+
 startOverButton.addEventListener('click', () => {
   form.style.display = 'block'
   resultsDiv.style.display = 'none'
@@ -14,6 +33,7 @@ startOverButton.addEventListener('click', () => {
   translationTextElement.value = ''
   translateButton.disabled = false
   translateButton.innerHTML = 'Translate'
+  textArea.focus()
 })
 
 const craftMessage = (text, selectedLanguage) => {
@@ -36,7 +56,7 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault()
   translateButton.disabled = true
   translateButton.innerHTML = 'Translating...'
-  const text = document.getElementById('text').value
+  const text = textArea.value
   const selectedLanguage = document.querySelector(
     'input[name="language"]:checked'
   ).value
