@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+.big-shoulders-extraBold {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+.poppins-semibold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.poppins-bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.br1 {
+  border-radius: 1rem;
+}
+.br0 {
+  border-radius: 0.5rem;
+}
+.my1p5 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+body {
+  background-color: gray;
+}
+
+#frame {
+  width: 390px;
+  height: 780px;
+  background-color: white;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#header {
+  width: 100%;
+  height: 213px;
+  background: url(./assets/worldmap.png);
+  background-position: 48%;
+  background-repeat: no-repeat;
+  display: grid;
+  place-content: center;
+}
+
+#headerContent {
+  display: flex;
+  gap: 1rem;
+}
+#headerContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+#headerBrand {
+  font-size: 43px;
+  color: #32cd32;
+  margin: 0;
+}
+
+#headerMotto {
+  color: white;
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+#main {
+  padding: 2rem 1rem;
+  font-size: 20px;
+  height: 567px;
+}
+
+form {
+  border: 4px solid black;
+  text-align: center;
+  height: 100%;
+  padding: 0em 1rem;
+}
+
+.blue {
+  color: #035a9d;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #eff0f4;
+  border: none;
+  resize: none;
+}
+#radioDiv {
+  text-align: left;
+  margin-left: 1rem;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#radioDiv input {
+  margin-right: 0.5rem;
+}
+
+button {
+  background-color: #035a9d;
+  color: white;
+  font-size: 24px;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 40px;
+  padding: 0.75rem;
+}

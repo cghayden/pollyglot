@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="frame">
+      <header id="header">
+        <div id="headerContent">
+          <div>
+            <img src="./assets/parrot.png" />
+          </div>
+          <div id="headerContentContainer">
+            <p id="headerBrand" class="big-shoulders-extraBold">PollyGlot</p>
+            <p id="headerMotto" class="poppins-semibold">
+              Perfect Translation Every Time
+            </p>
+          </div>
+        </div>
+      </header>
+      <div id="main" class="poppins-bold">
+        <form class="br1">
+          <p class="blue my1p5">Text to translate 👇</p>
+          <textarea
+            class="br1"
+            id="text"
+            name="text"
+            rows="5"
+            placeholder="enter text to translate"
+          ></textarea>
+          <p class="blue">Select Language 👇</p>
+          <div class="" id="radioDiv">
+            <div class="radioItem">
+              <input type="radio" id="french" name="language" value="French" />
+              <label for="french">French 🇫🇷</label>
+            </div>
+            <div class="radioItem">
+              <input
+                type="radio"
+                id="spanish"
+                name="language"
+                value="Spanish"
+              />
+              <label for="spanish">Spanish 🇪🇸</label>
+            </div>
+
+            <div class="radioItem">
+              <input
+                type="radio"
+                id="japanese"
+                name="language"
+                value="Japanese"
+              />
+              <label for="japanese">Japanese 🇯🇵</label>
+            </div>
+          </div>
+          <button class="br0 poppins-bold">Translate</button>
+        </form>
+      </div>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
