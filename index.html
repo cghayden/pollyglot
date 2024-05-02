@@ -31,7 +31,7 @@
         </div>
       </header>
       <div id="main" class="poppins-bold">
-        <form class="br1">
+        <form id="form" class="br1">
           <p class="blue my1p5">Text to translate 👇</p>
           <textarea
             class="br1"
@@ -43,7 +43,13 @@
           <p class="blue">Select Language 👇</p>
           <div class="" id="radioDiv">
             <div class="radioItem">
-              <input type="radio" id="french" name="language" value="French" />
+              <input
+                type="radio"
+                id="french"
+                name="language"
+                value="french"
+                checked
+              />
               <label for="french">French 🇫🇷</label>
             </div>
             <div class="radioItem">
@@ -51,7 +57,7 @@
                 type="radio"
                 id="spanish"
                 name="language"
-                value="Spanish"
+                value="spanish"
               />
               <label for="spanish">Spanish 🇪🇸</label>
             </div>
@@ -61,13 +67,22 @@
                 type="radio"
                 id="japanese"
                 name="language"
-                value="Japanese"
+                value="japanese"
               />
               <label for="japanese">Japanese 🇯🇵</label>
             </div>
           </div>
-          <button class="br0 poppins-bold">Translate</button>
+          <button class="br0 poppins-bold" id="submit">Translate</button>
         </form>
+        <div id="'results">
+          <p class="blue my1p5">Original Text 👇</p>
+          <textarea disabled id="originalText" class="br1" rows="5">
+ original here</textarea
+          >
+          <p class="blue">Your translation 👇</p>
+          <textarea disabled id="translation" class="br1" rows="5"> </textarea>
+          <button class="br" id="startOver">Start Over</button>
+        </div>
       </div>
     </div>
     <script src="index.js" type="module"></script>
