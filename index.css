@@ -30,7 +30,7 @@
 }
 body {
   background-color: rgb(176, 195, 238);
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   max-width: 430px;
   margin: 0 auto;
@@ -45,7 +45,7 @@ body {
 
 #header {
   width: 100%;
-  height: 27%;
+  height: 213px;
   background: url(./assets/worldmap.png);
   background-position: 48%;
   background-repeat: no-repeat;
@@ -170,10 +170,13 @@ button:disabled {
   .hideOnMobile {
     display: none;
   }
-  /* #main {
+  #header {
+    height: 180px;
+  }
+  #main {
     height: 73%;
     padding: 0.5rem 0.75rem;
-    font-size: 16px;
+    font-size: 18px;
   }
   .flag {
     font-size: 1.4rem;
@@ -185,5 +188,5 @@ button:disabled {
   .my1p5 {
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
-  } */
+  }
 }
