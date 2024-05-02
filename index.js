@@ -2,15 +2,16 @@ import OpenAI from 'openai'
 
 const form = document.getElementById('form')
 const originalTextElement = document.getElementById('originalText')
-const translationElement = document.getElementById('translation')
+const resultsDiv = document.getElementById('results')
+const translationTextElement = document.getElementById('translation')
 const startOverButton = document.getElementById('startOver')
 
 startOverButton.addEventListener('click', () => {
   form.style.display = 'block'
-  translationElement.style.display = 'none'
+  resultsDiv.style.display = 'none'
   form.reset()
   originalTextElement.value = ''
-  translationElement.value = ''
+  translationTextElement.value = ''
 })
 
 const craftMessage = (text, selectedLanguage) => {
@@ -57,9 +58,9 @@ form.addEventListener('submit', async (e) => {
 
 function renderTranslation(response, originalText) {
   form.style.display = 'none'
-  translationElement.style.display = 'block'
+  resultsDiv.style.display = 'block'
 
   originalTextElement.value = originalText
-  translationElement.value = response
+  translationTextElement.value = response
 }
 // Please translate the text to the specified language and then translate it back to English.  I will then ask you to provide the translated text back to me.  Are you ready to begin?
