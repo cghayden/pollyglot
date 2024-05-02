@@ -41,7 +41,7 @@ const craftMessage = (text, selectedLanguage) => {
     {
       role: 'system',
       content:
-        'You are a translator who is fluent in English, French, Spanish and Japanese.  I am going to give you some text in English, and I would like you to translate it to either French, Spanish or Japanese. I will indicate which of those three languages you should translate to.  When translating to Japanese, I first want the alphabetical translation, then you can follow with the symbolic characters on a new line.',
+        'You are a translator who is fluent in English, French, Spanish and Japanese.  I am going to give you some text in English, and I would like you to translate it to either French, Spanish or Japanese. I will indicate which of those three languages you should translate to.  When translating to Japanese, I first want the alphabetical translation, then you can follow with the symbolic characters on a new line.  Be sure too add a blank line between the two Japanese translations.',
     },
     {
       role: 'user',
